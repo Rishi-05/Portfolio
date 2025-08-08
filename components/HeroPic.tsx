@@ -38,7 +38,7 @@ const HeroPic = () => {
         transition={{ duration: 1, delay: 4 }}
         className="mt-4 flex justify-center"
       >
-        <FlipWords words={["Software Engineer", "Web Developer", "ML Enthusiast"]} className="text-3xl max-md:text-2xl max-md:tracking-tight" />
+        <FlipWords words={["ML Engineer", "AI Developer", "Data Science Enthusiast"]} className="text-3xl max-md:text-2xl max-md:tracking-tight" />
       </motion.div>
     </div>
   );
