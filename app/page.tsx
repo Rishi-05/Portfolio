@@ -12,14 +12,13 @@ import Chatbot from '@/components/Chatbot';
 export default function Home() {
 
   const skills = [
-    { title: 'React', iconName: 'react' },
-    { title: 'Redux', iconName: 'redux' },
-    { title: 'expressjs', iconName: 'expressjs' },
-    { title: 'Nodejs', iconName: 'nodejs' },
-    { title: 'TailwindCSS', iconName: 'tailwindcss' },
+    { title: 'Python', iconName: 'python' },
+    { title: 'Flask', iconName: 'flask' },
+    { title: 'FastAPI', iconName: 'fastapi' },
+    { title: 'Django', iconName: 'django' },
     { title: 'Mongodb', iconName: 'mongodb' },
     { title: 'SQL', iconName: 'sqllite' },
-    { title: 'NEXTjs', iconName: 'nextjs' },
+    { title: 'LangChain', iconName: 'langchain' }
   ];
 
   
