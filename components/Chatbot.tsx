@@ -99,7 +99,7 @@ export default function EnhancedChatbot() {
         resumeContent
       })
       setChatOpen(true)
-      setChatHistory([{ userMessage: '', botResponse: "Hey! Ask me questions about Mayuresh" }])
+      setChatHistory([{ userMessage: '', botResponse: "Hey! Ask me questions about Rishi" }])
       console.log('Session started:', response.data)
     } catch (error) {
       console.error('Error starting session:', error)
