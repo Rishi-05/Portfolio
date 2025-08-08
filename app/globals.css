@@ -4,18 +4,18 @@
 
 
 :root {
-    --card-bg-light: #f9fafb; /* light theme card background */
-    --card-bg-dark: #1a1a1a; /* dark theme card background */
-    --card-border-light: rgba(0, 0, 0, 0.1); /* light theme border */
-    --card-border-dark: rgba(255, 255, 255, 0.2); /* dark theme border */
-    --card-text-light: #1a202c; /* light theme text */
-    --card-text-dark: #f9fafb; /* dark theme text */
-    --card-shadow-light: rgba(0, 0, 0, 0.1); /* light theme shadow */
-    --card-shadow-dark: rgba(46, 229, 157, 0.1); /* dark theme shadow */
-    --btn-bg-light: #1a202c; /* light theme button background */
-    --btn-bg-dark: #f9fafb; /* dark theme button background */
-    --btn-text-light: #f9fafb; /* light theme button text */
-    --btn-text-dark: #1a202c; /* dark theme button text */
+    --card-bg-light: #f9fafb;
+    --card-bg-dark: #1a1a1a;
+    --card-border-light: rgba(0, 0, 0, 0.1);
+    --card-border-dark: rgba(255, 255, 255, 0.2); 
+    --card-text-light: #1a202c; 
+    --card-text-dark: #f9fafb; 
+    --card-shadow-light: rgba(0, 0, 0, 0.1); 
+    --card-shadow-dark: rgba(46, 229, 157, 0.1); 
+    --btn-bg-light: #1a202c; 
+    --btn-bg-dark: #f9fafb; 
+    --btn-text-light: #f9fafb; 
+    --btn-text-dark: #1a202c;
   }
   
   body.dark {
@@ -42,9 +42,9 @@
   }
   
   .glow {
-    font-size: 3em; /* Adjust font size as needed */
-    color: #fff; /* Text color */
-    text-shadow: 0 0 10px rgba(128, 0, 128, 0.5); /* Purple glow effect */
+    font-size: 3em; 
+    color: #fff; 
+    text-shadow: 0 0 10px rgba(128, 0, 128, 0.5); 
   }
   
   
