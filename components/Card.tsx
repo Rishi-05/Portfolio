@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ExternalLinkIcon } from 'lucide-react'
 
-const Card = ({ title, description, link, image, github }: { title: string, description: string, link: string | null, image: string, github: string }) => {
+const Card = ({ title, description, image, github }: { title: string, description: string, image: string, github: string }) => {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-black bg-opacity-50 dark:bg-opacity-90 relative group/card border-neutral-700 w-auto sm:w-[30rem] h-auto rounded-xl p-6 border shadow-lg hover:shadow-[0_0_20px_5px_rgba(128,0,128,0.7)] transition-shadow duration-300">
@@ -30,26 +30,15 @@ const Card = ({ title, description, link, image, github }: { title: string, desc
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          {link && (
-            <CardItem
-              translateZ={20}
-              as={Link}
-              href={link}
-              target="__blank"
-              className="px-4 py-2 rounded-xl text-s font-normal dark:text-white text-[#8A2BE2] bg-transparent dark:bg-transparent hover:text-purple-500 transition-colors duration-300"
-            >
-              {title === 'WealthWise' ? 'Devfolio' : title === 'Traffic Surveillance System' ? 'Demo' : 'Live'} <ExternalLinkIcon className='inline-block w-4 h-4 ml-1' />
-            </CardItem>
-          )}
+        <div className="flex justify-end items-center mt-20">
           <CardItem
             translateZ={20}
             as={Link}
             href={github}
             target="__blank"
-            className="px-4 py-2 right-3 ml-auto  rounded-xl bg-purple-600 hover:bg-purple-700 dark:bg-purple-400 dark:hover:bg-purple-500 text-white dark:text-black text-xs font-bold transition-colors duration-300"
+            className="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 dark:bg-purple-400 dark:hover:bg-purple-500 text-white dark:text-black text-xs font-bold transition-colors duration-300"
           >
-            Github
+            GitHub <ExternalLinkIcon className="inline-block w-4 h-4 ml-1" />
           </CardItem>
         </div>
       </CardBody>
