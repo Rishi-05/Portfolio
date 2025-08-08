@@ -5,28 +5,31 @@ import React from 'react'
 
 const page = () => {
   const skills = [
-    { title: 'React', iconName: 'react' },
-    { title: 'Redux', iconName: 'redux' },
-    { title: 'expressjs', iconName: 'expressjs' },
-    { title: 'Nodejs', iconName: 'nodejs' },
-    { title: 'TailwindCSS', iconName: 'tailwindcss' },
-    { title: 'Mongodb', iconName: 'mongodb' },
-    { title: 'SQL', iconName: 'sqllite' },
-    { title: 'NEXTjs', iconName: 'nextjs' },
-    { title: 'Html', iconName: 'html5' },
-    { title: 'Css', iconName: 'css3' },
-    { title: 'Javascript', iconName: 'javascript' },
-    { title: 'Typescript', iconName: 'typescript' },
-    { title: 'Netlify', iconName: 'netlify' },
-    { title: 'Git', iconName: 'git' },
-    { title: 'Github', iconName: 'github' },
-    { title: 'Bootstrap', iconName: 'bootstrap' },
     { title: 'Python', iconName: 'python' },
+    { title: 'Flask', iconName: 'flask' },
+    { title: 'FastAPI', iconName: 'fastapi' },
+    { title: 'Django', iconName: 'django' },
+    { title: 'Celery', iconName: 'celery' },
+    { title: 'RabbitMQ', iconName: 'rabbitmq' },
+    { title: 'React', iconName: 'react' }, 
+    { title: 'HTML', iconName: 'html5' },
+    { title: 'CSS', iconName: 'css3' },
+    { title: 'JavaScript', iconName: 'javascript' },
+    { title: 'Git', iconName: 'git' },
+    { title: 'GitHub', iconName: 'github' },
+    { title: 'MySQL', iconName: 'mysql' },
+    { title: 'MongoDB', iconName: 'mongodb' },
     { title: 'Numpy', iconName: 'numpy' },
     { title: 'Pandas', iconName: 'pandas' },
-    { title: 'Pytorch', iconName: 'pytorch' },
-
-    // Add more skills as needed
+    { title: 'Matplotlib', iconName: 'matplotlib' },
+    { title: 'Seaborn', iconName: 'seaborn' },
+    { title: 'Scikit-learn', iconName: 'scikitlearn' },
+    { title: 'TensorFlow', iconName: 'tensorflow' },
+    { title: 'PyTorch', iconName: 'pytorch' },
+    { title: 'OpenCV', iconName: 'opencv' },
+    { title: 'spaCy', iconName: 'spacy' },
+    { title: 'NLP', iconName: 'nlp' },
+    { title: 'LangChain', iconName: 'langchain' }
   ];
   return (
     <div className='realtive flex flex-col items-center w-full mb-10' id="skills">
