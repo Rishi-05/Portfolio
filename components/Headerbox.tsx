@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'; // Importing LinkedIn, GitHub, and Instagram icons from react-icons
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'; 
 
 const Headerbox = () => {
   return (
@@ -8,7 +8,7 @@ const Headerbox = () => {
         max-md:justify-center max-md:items-center max-md:mt-5">
         <nav className="flex space-x-8 cursor-pointer">
           <a
-            href="https://www.linkedin.com/in/mayuresh-chavan-04a3b5259/"
+            href="https://www.linkedin.com/in/rishi-chilveri-91a01327b/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-2 text-white hover:text-purple-500 cursor-pointer"
@@ -16,7 +16,7 @@ const Headerbox = () => {
             <FaLinkedin size={30} />
           </a>
           <a
-            href="https://github.com/Mayur3sh007"
+            href="https://github.com/Rishi-05/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-2 text-white hover:text-purple-500 cursor-pointer"
@@ -24,7 +24,7 @@ const Headerbox = () => {
             <FaGithub size={30} />
           </a>
           <a
-            href="https://www.instagram.com/mayur.esh1000/"
+            href="https://www.instagram.com/rishi_dlr/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-2 text-white hover:text-purple-500 cursor-pointer"
