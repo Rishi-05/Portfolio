@@ -1,0 +1,74 @@
+Name:- Rishi Chilveri
+
+Relevant Links: 
+Github = https://github.com/Rishi-05, 
+LinkedIn = https://www.linkedin.com/in/rishi-chilveri-91a01327b/. 
+Certification Links: [link : https://drive.google.com/drive/folders/1PWptqi3QHufGjQ8yNvdrqBMqgBYvUHJM?usp=sharing] 
+email = chilveririshi@gmail.com 
+location = Mumbai, India
+
+
+Achievements
+Academic Success
+Achieved a CGPA of 10.00 and 9.76 during the 2nd year
+Passed the Python 3.4.3 Test conducted by IIT Bombay’s Spoken Tutorial Project with a score of 70% and
+earned 4 credits.
+Completed Python for Data Science 4-week NPTEL course (Jul–Aug 2023) with a consolidated score of 72/100.
+
+
+Skills
+Frontend
+HTML, CSS, React.js,
+API integration, Tailwind CSS
+Programming Languages
+C, C++, Python, R, Javascript
+Backend
+Node.js, Django, Flask, MongoDB, mySQL
+SQL, Firebase, Appwrite
+Tools & Others
+Github, Git, GenAI, NLP, Langchain, Docker
+
+
+Professional Experience
+Data Science Intern
+@GROK LEARNING
+• Gained hands-on experience with machine learning algorithms, including supervised and unsupervised learning
+techniques.
+• Developed a churn prediction model using logistic regression and random forest on a telecom dataset, improving
+customer retention strategy and achieving 87% prediction accuracy
+• Automated the data preprocessing pipeline using Python (Pandas, Scikit-learn), cutting model training time by
+40%.
+
+
+Projects
+Text2Tone - Flask, JWT Authentication, PostgreSQL, Text-to-Speech API 
+• Developed an intuitive text-to-audio conversion platform using Flask, enabling users to convert written content
+into natural-sounding speech with support for multiple languages.
+• Integrated Text-to-Speech APIs and optimized the backend pipeline, reducing audio generation time by 45%.
+PriceScope - Django, HTML & CSS, Bcrypt, ML Model, MySQL, Web Scraping 
+• Built a machine learning-powered web platform to predict house prices using real-time and historical data,
+helping users make informed property investment decisions.
+• Implemented data scraping from housing websites Makaan.com and cleaned datasets for model training, improving data accuracy by 60%.
+WildVision - MobileNetV2, OpenCV, Flask, Python 
+• Built an Animal classification system using MobileNetV2 and OpenCV, achieving over 90% accuracy on realworld wildlife and domestic animal images.
+• Utilized OpenCV for image preprocessing, contour detection, and frame extraction, improving classification
+reliability by 35%.
+
+
+Education
+BTech CSE-AIML
+Bharati Vidyapeeth (Deemed to Be University) Navi Mumbai, Maharashtra
+2022 – 2026 | Mumbai, India
+•CGPA: 9.22
+•Relevant Coursework: Data Structures, Algorithms, Object-Oriented Programming, Database Management, Machine Learning, Artificial Intelligence
+
+
+
+Summary:
+Rishi Chliveri is a passionate Machine Learning Engineer & AI Developer with a strong academic foundation, currently pursuing a B.Tech in Computer Science (3rd year). With hands-on experience in AI/ML, deep learning, computer vision, and NLP, Rishi has built impactful projects that bridge cutting-edge research with real-world applications.
+
+He has developed diverse AI solutions, including a Breast Cancer BI-RADS Classification system in collaboration with his college professor, an Animal Image Classification model using MobileNetV2 and OpenCV, and a Crop Recommendation System leveraging soil and weather data for precision agriculture. His portfolio also features Text2Tone, a text-to-speech application supporting multiple languages, and various web-integrated AI tools using Flask and Django.
+
+Rishi’s expertise spans Python, TensorFlow, PyTorch, scikit-learn, LangChain, FastAPI, Flask, Django, Celery, RabbitMQ, and data visualization tools like Matplotlib and Seaborn. He is proficient in data preprocessing, model training, LLMs, computer vision pipelines, and integrating AI into full-stack applications.
+
+With a proven ability to solve complex problems, work on research-driven initiatives, and deliver end-to-end AI-powered solutions, Rishi combines strong technical skills with a passion for innovation, making him a valuable asset for AI and data science teams.
