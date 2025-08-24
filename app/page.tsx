@@ -14,11 +14,12 @@ export default function Home() {
   const skills = [
     { title: 'Python', iconName: 'python' },
     { title: 'Flask', iconName: 'flask' },
-    { title: 'FastAPI', iconName: 'fastapi' },
-    { title: 'Django', iconName: 'django' },
-    { title: 'Mongodb', iconName: 'mongodb' },
-    { title: 'SQL', iconName: 'sqllite' },
-    { title: 'LangChain', iconName: 'langchain' }
+    { title: 'React', iconName: 'react'},
+    { title: 'PyTorch', iconName: 'pytorch' },
+    { title: "MySQL", iconName: 'mysql' },
+    { title: 'Git', iconName: 'git' },
+    { title: 'LangChain', iconName: 'langchain' },
+    { title: 'Celery', iconName: 'rabbitmq' }
   ];
 
   

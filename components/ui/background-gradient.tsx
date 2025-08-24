@@ -1,78 +1,38 @@
-import { cn } from "@/utils/cn";
 import React from "react";
-import { motion } from "framer-motion";
 
-export const BackgroundGradient = ({
-  children,
-  className,
-  containerClassName,
-  animate = true,
-}: {
-  children?: React.ReactNode;
+interface BackgroundGradientProps {
   className?: string;
-  containerClassName?: string;
-  animate?: boolean;
-}) => {
-  const variants = {
-    initial: {
-      backgroundPosition: "0 50%",
-      opacity: 0,
-    },
-    animate: {
-      backgroundPosition: ["0 50%", "100% 50%", "0 50%"],
-      opacity: 1,
-    },
-  };
-  return (
-    <div className={cn("relative group", containerClassName)}>
-      <motion.div
-        variants={animate ? variants : undefined}
-        initial={animate ? "initial" : undefined}
-        animate={animate ? "animate" : undefined}
-        transition={
-          animate
-            ? {
-                duration: 5,
-                repeat: Infinity,
-                repeatType: "reverse",
-                delay: 2.5, // Align the delay with the Image component
-              }
-            : undefined
-        }
-        style={{
-          backgroundSize: animate ? "400% 400%" : undefined,
-        }}
-        className={cn(
-          "absolute rounded-full overflow-hidden -3xl z-[1] opacity-60 group-hover:opacity-100 blur-xl  transition duration-500 will-change-transform",
-          " bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]"
-        )}
-      />
-      <motion.div
-        variants={animate ? variants : undefined}
-        initial={animate ? "initial" : undefined}
-        animate={animate ? "animate" : undefined}
-        transition={
-          animate
-            ? {
-                duration: 5,
-                repeat: Infinity,
-                repeatType: "reverse",
-                delay: 2.5, // Align the delay with the Image component
-              }
-            : undefined
-        }
-        style={{
-          backgroundSize: animate ? "400% 400%" : undefined,
-        }}
-        className={cn(
-          "absolute inset-0 rounded-full z-[1] will-change-transform px-1 py-1",
-          "bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]"
-        )}
-      />
+  children?: React.ReactNode;
+}
 
-      <div className={cn("relative z-10", className)}>
-        {children}
-      </div>
+export const BackgroundGradient: React.FC<BackgroundGradientProps> = ({
+  className = "",
+  children,
+}) => {
+  return (
+    <div
+      className={`relative overflow-hidden ${className}`}
+      style={{
+        background: "linear-gradient(135deg, #16048EFF, #4655F8FF, #48CEECFF)",
+        backgroundSize: "400% 400%",
+        animation: "gradientShift 12s ease infinite",
+      }}
+    >
+      {children}
+      <style jsx>{`
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      `}</style>
     </div>
   );
 };
+

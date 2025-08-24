@@ -25,7 +25,7 @@ const HeroPic = () => {
             src="/profile.png"
             width={350}
             height={350}
-            alt="The Man the Myth The Legend"
+            alt="Just ME"
             className="rounded-full"
           />
         </motion.div>
@@ -38,7 +38,7 @@ const HeroPic = () => {
         transition={{ duration: 1, delay: 4 }}
         className="mt-4 flex justify-center"
       >
-        <FlipWords words={["ML Engineer", "AI Developer", "Data Science Enthusiast"]} className="text-3xl max-md:text-2xl max-md:tracking-tight" />
+        <FlipWords words={["ML Engineer", "AI Developer", "Data Science Geek"]} className="text-3xl max-md:text-2xl max-md:tracking-tight" />
       </motion.div>
     </div>
   );

@@ -15,7 +15,6 @@ export const FlipWords = ({
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
-  // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {
     const word = words[words.indexOf(currentWord) + 1] || words[0];
     setCurrentWord(word);
@@ -60,7 +59,7 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "z-10 inline-block absolute text-purple-300 dark:text-neutral-100 pt-2 w-fit text-2xl ",
+          "z-10 inline-block absolute text-blue-700 dark:text-neutral-100 pt-2 w-fit text-2xl ",
           className
         )}
         key={currentWord}

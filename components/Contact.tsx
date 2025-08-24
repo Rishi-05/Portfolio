@@ -37,7 +37,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-lg mx-auto p-6 rounded-lg shadow-md "
+      className="max-w-lg mx-auto p-6 rounded-xl shadow-lg bg-gray-800 border border-blue-500"
     >
       <h3 className="text-center text-xl text-white mb-5">Please enter your details</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -48,7 +48,7 @@ const ContactForm = () => {
             placeholder="First Name"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            className="py-3 px-4 bg-gray-900 text-white rounded-md border-2 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="py-3 px-4 bg-gray-900 text-white rounded-md border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -59,7 +59,7 @@ const ContactForm = () => {
             placeholder="Last Name"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            className="py-3 px-4 bg-gray-900 text-white rounded-md border-2 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="py-3 px-4 bg-gray-900 text-white rounded-md border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
         </div>
@@ -72,7 +72,7 @@ const ContactForm = () => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="py-3 px-4 w-full bg-gray-900 text-white rounded-md border-2 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="py-3 px-4 bg-gray-900 text-white rounded-md border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
       </div>
@@ -83,7 +83,7 @@ const ContactForm = () => {
           placeholder="Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="py-3 px-4 w-full bg-gray-900 text-white rounded-md border-2 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="py-3 px-4 w-full bg-gray-900 text-white rounded-md border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           rows={4}
           required
         />
@@ -91,8 +91,8 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full mt-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-      >
+        className="w-full mt-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
         Submit
       </button>
     </form>

@@ -8,22 +8,22 @@ export function Navbar() {
     {
       name: "Home",
       link: "#header",
-      icon: <IconHome className="h-4 w-4 text-[#8A2BE2] dark:text-[#8A2BE2]" />,
+      icon: <IconHome className="h-4 w-4 text-[#2B77E2FF] dark:text-[#2B77E2FF]" />,
     },
     {
       name: "Projects",
       link: "#projects",
-      icon: <IconMessage className="h-4 w-4 text-[#8A2BE2] dark:text-[#8A2BE2]" />,
+      icon: <IconMessage className="h-4 w-4 text-[#2B77E2FF] dark:text-[#2B77E2FF]" />,
     },
     {
       name: "Skills",
       link: "#skills",
-      icon: <IconUser className="h-4 w-4 text-[#8A2BE2] dark:text-[#8A2BE2]" />,
+      icon: <IconUser className="h-4 w-4 text-[#2B77E2FF] dark:text-[#2B77E2FF]" />,
     },
     {
       name: "Contact",
       link: "#contact",
-      icon: <IconMessage className="h-4 w-4 text-[#8A2BE2] dark:text-[#8A2BE2]" />,
+      icon: <IconMessage className="h-4 w-4 text-[#2B77E2FF] dark:text-[#2B77E2FF]" />,
     },
   ];
 

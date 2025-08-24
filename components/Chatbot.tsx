@@ -142,7 +142,7 @@ export default function EnhancedChatbot() {
             <Button
               onClick={startSession}
               disabled={isLoading}
-              className="w-16 h-16 rounded-full bg-purple-600 hover:bg-purple-700 text-white shadow-lg"
+              className="w-16 h-16 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
             >
               <MessageCircle className="w-8 h-8" />
               <span className="sr-only">Open Chat</span>
@@ -155,14 +155,14 @@ export default function EnhancedChatbot() {
             exit={{ scale: 0.8, opacity: 0, y: 20 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <Card className="w-full max-w-md h-[600px] bg-black bg-opacity-80 backdrop-blur-md text-white border border-purple-600 shadow-2xl">
+            <Card className="w-full max-w-md h-[600px] bg-black bg-opacity-80 backdrop-blur-md text-white border border-blue-600 shadow-2xl">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-xl font-bold text-purple-400">AI Assistant</CardTitle>
+                <CardTitle className="text-xl font-bold text-blue-400">AI Assistant</CardTitle>
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => setChatOpen(false)}
-                  className="text-purple-400 hover:text-purple-300"
+                  className="text-blue-400 hover:text-blue-300"
                 >
                   <X className="h-4 w-4" />
                   <span className="sr-only">Close</span>
@@ -174,7 +174,7 @@ export default function EnhancedChatbot() {
                     <div key={ind} className="space-y-2">
                       {chat.userMessage && (
                         <div className="flex flex-col bg-purple-900 bg-opacity-50 rounded-lg p-3 ml-8">
-                          <p className="font-semibold text-purple-300">You:</p>
+                          <p className="font-semibold text-blue-300">You:</p>
                           <p>{chat.userMessage}</p>
                         </div>
                       )}
@@ -184,11 +184,11 @@ export default function EnhancedChatbot() {
                           animate={isPlaying ? { scale: [1, 1.2, 1] } : {}}
                           transition={{ repeat: Infinity, duration: 1.5 }}
                         >
-                          <div className={`absolute inset-0 bg-purple-600 rounded-full ${isPlaying ? 'animate-pulse' : ''}`}></div>
+                          <div className={`absolute inset-0 bg-blue-600 rounded-full ${isPlaying ? 'animate-pulse' : ''}`}></div>
                           <MessageCircle className="absolute inset-1 w-6 h-6 text-white" />
                         </motion.div>
                         <div className="flex-1 flex flex-col bg-gray-800 bg-opacity-50 rounded-lg p-3">
-                          <p className="font-semibold text-purple-400">Assistant:</p>
+                          <p className="font-semibold text-blue-400">Assistant:</p>
                           <p>{chat.botResponse}</p>
                           {chat.audioUrl && (
                             <div className="mt-2">
@@ -212,7 +212,7 @@ export default function EnhancedChatbot() {
               </CardContent>
               <CardFooter className="flex gap-2">
                 <Input
-                  className="flex-1 bg-gray-800 bg-opacity-50 text-white border-purple-600 focus:ring-purple-400"
+                  className="flex-1 bg-gray-800 bg-opacity-50 text-white border-blue-600 focus:ring-blue-400"
                   placeholder="Type your message..."
                   value={userQuery}
                   onChange={(e) => setUserQuery(e.target.value)}
@@ -222,7 +222,7 @@ export default function EnhancedChatbot() {
                 <Button
                   onClick={chatWithLlama}
                   disabled={isLoading}
-                  className="bg-purple-600 hover:bg-purple-700 text-white"
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
                 >
                   <SendHorizontal className="w-5 h-5" />
                   <span className="sr-only">Send</span>

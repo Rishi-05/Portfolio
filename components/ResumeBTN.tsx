@@ -9,10 +9,10 @@ function YourComponent() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 5000); // 5000 milliseconds = 5 seconds
+    }, 5000); 
 
     return () => clearTimeout(timer);
-  }, []); // Empty dependency array ensures useEffect runs only once
+  }, []); 
 
   const openPdf = () => {
     window.open('/Resume.pdf', '_blank');
@@ -28,7 +28,7 @@ function YourComponent() {
             exit={{ opacity: 0, y: 20 }}
             className='ml-60 -mb-5 mt-5 max-md:ml-[28%]'>
             <button className="p-[3px] relative" onClick={openPdf}>
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg" />
               <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                 Resume
               </div>

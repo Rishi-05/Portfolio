@@ -2,7 +2,7 @@
 import React from 'react'
 import { HeroName } from '../HeroName'
 import HeroPic from '../HeroPic'
-import { BackgroundBeams } from '../ui/background-beams'
+import FinisherBackground from '../FinisherBackground'
 import ResumeBTN from '../ResumeBTN';
 
 const HeroSection = () => {

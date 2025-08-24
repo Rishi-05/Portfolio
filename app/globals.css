@@ -43,9 +43,10 @@
   
   .glow {
     font-size: 3em; 
-    color: #fff; 
-    text-shadow: 0 0 10px rgba(250, 204, 21, 0.5); 
+    color: #acedff; 
+    text-shadow: 0 0 10px rgba(163, 224, 252, 0.713); 
   }
+  
   
   
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
@@ -128,8 +129,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 .text-custom-purple {
-  color: #facc15;
-  text-shadow: 0 0 15px #fbbf24;
+  color: #e4fcff;
+  text-shadow: 0 0 15px #60eaff;
 }
 
 .bg-custom-purple {
@@ -197,7 +198,6 @@
         --chart-5: 340 75% 55%;
     }
 }
-
 
 @layer base {
   * {

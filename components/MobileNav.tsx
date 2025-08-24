@@ -10,22 +10,22 @@ const navItems = [
   {
     name: "Home",
     link: "#header",
-    icon: <IconHome className="h-6 w-6 text-purple-400" />,
+    icon: <IconHome className="h-6 w-6 text-blue-400" />,
   },
   {
     name: "Projects",
     link: "#projects",
-    icon: <IconMessage className="h-6 w-6 text-purple-400" />,
+    icon: <IconMessage className="h-6 w-6 text-blue-400" />,
   },
   {
     name: "Skills",
     link: "#skills",
-    icon: <IconUser className="h-6 w-6 text-purple-400" />,
+    icon: <IconUser className="h-6 w-6 text-blue-400" />,
   },
   {
     name: "Contact",
     link: "#contact",
-    icon: <IconMessage className="h-6 w-6 text-purple-400" />,
+    icon: <IconMessage className="h-6 w-6 text-blue-400" />,
   },
 ]
 
@@ -38,7 +38,7 @@ export default function MobileNavbar() {
     <>
       <button
         onClick={toggleNavbar}
-        className="fixed top-4 left-4 z-50 rounded-full bg-purple-600 p-3 text-white shadow-lg"
+        className="fixed top-4 left-4 z-50 rounded-full bg-blue-600 p-3 text-white shadow-lg"
       >
         {isOpen ? (
           <IconX className="h-6 w-6" />
@@ -75,7 +75,7 @@ export default function MobileNavbar() {
                   key={index}
                   href={item.link}
                   className={cn(
-                    "flex w-full items-center justify-center space-x-2 rounded-full bg-gray-800 p-3 text-white transition-colors hover:bg-purple-600"
+                    "flex w-full items-center justify-center space-x-2 rounded-full bg-gray-800 p-3 text-white transition-colors hover:bg-blue-600"
                   )}
                   onClick={toggleNavbar}
                 >

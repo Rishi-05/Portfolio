@@ -7,10 +7,10 @@ import { ExternalLinkIcon } from 'lucide-react'
 const Card = ({ title, description, image, github }: { title: string, description: string, image: string, github: string }) => {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-black bg-opacity-50 dark:bg-opacity-90 relative group/card border-neutral-700 w-auto sm:w-[30rem] h-auto rounded-xl p-6 border shadow-lg hover:shadow-[0_0_20px_5px_rgba(128,0,128,0.7)] transition-shadow duration-300">
+      <CardBody className="bg-black bg-opacity-50 dark:bg-opacity-90 relative group/card border-neutral-700 w-[30rem] h-[35rem] rounded-xl p-6 border shadow-lg hover:shadow-[0_0_20px_5px_rgba(0,123,255,0.7)] transition-shadow duration-300">
         <CardItem
           translateZ="50"
-          className="text-2xl font-bold text-[#8A2BE2] dark:text-purple-300"
+          className="text-2xl font-bold text-[#2BCAE2FF] dark:text-blue-300"
         >
           {title}
         </CardItem>
@@ -26,7 +26,7 @@ const Card = ({ title, description, image, github }: { title: string, descriptio
             src={image}
             height="1000"
             width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-[0_0_20px_5px_rgba(128,0,128,0.7)] transition-shadow duration-300"
+            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-[0_0_20px_5px_rgba(0,123,255,0.7)] transition-shadow duration-300"
             alt="thumbnail"
           />
         </CardItem>
@@ -36,7 +36,7 @@ const Card = ({ title, description, image, github }: { title: string, descriptio
             as={Link}
             href={github}
             target="__blank"
-            className="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 dark:bg-purple-400 dark:hover:bg-purple-500 text-white dark:text-black text-xs font-bold transition-colors duration-300"
+            className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 dark:bg-blue-400 dark:hover:bg-blue-500 text-white dark:text-black text-xs font-bold transition-colors duration-300"
           >
             GitHub <ExternalLinkIcon className="inline-block w-4 h-4 ml-1" />
           </CardItem>

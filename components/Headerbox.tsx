@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Headerbox = () => {
   return (
-    <header className="w-full text-purple-500 dark:text-purple-300 p-4 shadow-lg z-10000">
+    <header className="w-full text-blue-500 dark:text-blue-300 p-4 shadow-lg z-10000">
       <div className="max-w-7xl mx-auto flex justify-end items-center
         max-md:justify-center max-md:items-center max-md:mt-5">
         <nav className="flex space-x-8 cursor-pointer">
@@ -11,7 +11,7 @@ const Headerbox = () => {
             href="https://www.linkedin.com/in/rishi-chilveri-91a01327b/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-white hover:text-purple-500 cursor-pointer"
+            className="flex items-center space-x-2 text-white hover:text-blue-500 cursor-pointer"
           >
             <FaLinkedin size={30} />
           </a>
@@ -19,7 +19,7 @@ const Headerbox = () => {
             href="https://github.com/Rishi-05/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-white hover:text-purple-500 cursor-pointer"
+            className="flex items-center space-x-2 text-white hover:text-blue-500 cursor-pointer"
           >
             <FaGithub size={30} />
           </a>
@@ -27,7 +27,7 @@ const Headerbox = () => {
             href="https://www.instagram.com/rishi_dlr/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-white hover:text-purple-500 cursor-pointer"
+            className="flex items-center space-x-2 text-white hover:text-blue-500 cursor-pointer"
           >
             <FaInstagram size={30} />
           </a>
