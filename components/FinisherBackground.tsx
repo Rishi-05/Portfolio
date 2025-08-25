@@ -23,21 +23,30 @@ export default function FinisherBackground() {
             "pulse": 0
           },
           "speed": {
-            "x": { "min": 0.1, "max": 0.3 },
-            "y": { "min": 0.1, "max": 0.3 }
+            "x": {
+              "min": 0.1,
+              "max": 0.3
+            },
+            "y": {
+              "min": 0.1,
+              "max": 0.3
+            }
           },
           "colors": {
-            "background": "#0dbdff",
+            "background": "#0b132b",
             "particles": [
-              "#23c1ff",
-              "#4ac1df",
-              "#02afef"
+              "#042a4c"
             ]
           },
           "blending": "overlay",
-          "opacity": { "center": 1, "edge": 0.1 },
+          "opacity": {
+            "center": 1,
+            "edge": 0.1
+          },
           "skew": 0,
-          "shapes": ["t"]
+          "shapes": [
+            "c"
+          ] 
         });
       }
     };
