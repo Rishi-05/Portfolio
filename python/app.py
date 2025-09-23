@@ -83,7 +83,6 @@ def chat_with_llama(user_question, chat_history, resume_content):
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    try:
     data = request.json
     user_message = data.get('userMessage')
     resume_content = data.get('resumeContent')
@@ -99,10 +98,7 @@ def chat():
 
     response = chat_with_llama(user_message, chat_history, resume_content)
 
-    return jsonify({"botResponse": response})
-except Exception as e:
-logging.error(f"Chat endpoint error: {str(e)}")
-return jsonify({"error": str(e)}), 500
+    return jsonify(response)
 
 @app.route('/text-to-speech', methods=['POST'])
 def text_to_speech():
@@ -123,7 +119,6 @@ def text_to_speech():
             ),
             model_id="eleven_multilingual_v2",
         )
-        audio_bytes = b"".join([chunk for chunk in response])
 
         return Response(
             response=audio_bytes,
@@ -135,7 +130,6 @@ def text_to_speech():
 
     except Exception as e:
         print(f"An error occurred: {str(e)}")
-
 
 
 @app.route('/start_session', methods=['POST'])
