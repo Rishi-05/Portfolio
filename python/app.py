@@ -120,6 +120,8 @@ def text_to_speech():
             model_id="eleven_multilingual_v2",
         )
 
+        audio_bytes = b''.join(response)
+
         return Response(
             response=audio_bytes,
             content_type='audio/mpeg',
