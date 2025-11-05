@@ -4,13 +4,14 @@ Relevant Links:
 Github = https://github.com/Rishi-05, 
 LinkedIn = https://www.linkedin.com/in/rishi-chilveri-91a01327b/. 
 Certification Links: [link : https://drive.google.com/drive/folders/1PWptqi3QHufGjQ8yNvdrqBMqgBYvUHJM?usp=sharing] 
-email = chilveririshi@gmail.com 
+email = rishichilveri14@gmail.com 
 location = Mumbai, India
 
 
 Achievements
 Academic Success
 Achieved a CGPA of 10.00 and 9.76 during the 2nd year
+Achieved a CGPA of 9.22 the 3rd year
 Passed the Python 3.4.3 Test conducted by IIT Bombay’s Spoken Tutorial Project with a score of 70% and
 earned 4 credits.
 Completed Python for Data Science 4-week NPTEL course (Jul–Aug 2023) with a consolidated score of 72/100.
