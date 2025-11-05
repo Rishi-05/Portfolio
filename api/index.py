@@ -7,6 +7,7 @@ from groq import Groq
 import uuid
 import logging
 from elevenlabs import ElevenLabs,VoiceSettings
+
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 logging.basicConfig(level=logging.DEBUG)
@@ -81,7 +82,7 @@ def chat_with_llama(user_question, chat_history, resume_content):
         raise
 
 
-@app.route('/chat', methods=['POST'])
+@app.route('/api/chat', methods=['POST'])
 def chat():
     data = request.json
     user_message = data.get('userMessage')
@@ -100,7 +101,7 @@ def chat():
 
     return jsonify(response)
 
-@app.route('/text-to-speech', methods=['POST'])
+@app.route('/api/text-to-speech', methods=['POST'])
 def text_to_speech():
     try:
         data = request.get_json()
@@ -134,7 +135,7 @@ def text_to_speech():
         print(f"An error occurred: {str(e)}")
 
 
-@app.route('/start_session', methods=['POST'])
+@app.route('/api/start_session', methods=['POST'])
 
 def start_session():
     # Generate a unique session ID
@@ -144,7 +145,7 @@ def start_session():
     return jsonify({"session_id": session_id, "message": "New session started"})
 
 
-@app.route('/end_session', methods=['POST'])
+@app.route('/api/end_session', methods=['POST'])
 def end_session():
     session.clear()
     return jsonify({"message": "Session ended"})
