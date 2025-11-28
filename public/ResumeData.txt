@@ -40,6 +40,13 @@ customer retention strategy and achieving 87% prediction accuracy
 • Automated the data preprocessing pipeline using Python (Pandas, Scikit-learn), cutting model training time by
 40%.
 
+Software Developer Intern 
+@ Noice Innovation Labs Pvt. Ltd. 
+• Worked on software development projects involving C programming, contributing to the design and optimization of high-capacity data encoding systems.
+• Contributed to converting command-line based barcode generation tools into web and mobile responsive applications, improving accessibility and usability.
+• Collaborated with the team on web service integration, improving functionality and expanding accessibility
+of internal tools.
+• Strengthened debugging and version control while adhering to NDA compliance.
 
 Projects
 Text2Tone - Flask, JWT Authentication, PostgreSQL, Text-to-Speech API 
