@@ -61,6 +61,18 @@ WildVision - MobileNetV2, OpenCV, Flask, Python
 • Built an Animal classification system using MobileNetV2 and OpenCV, achieving over 90% accuracy on realworld wildlife and domestic animal images.
 • Utilized OpenCV for image preprocessing, contour detection, and frame extraction, improving classification
 reliability by 35%.
+Pixel Studio - React, FastAPI, ComfyUI, Stable Diffusion
+• Engineered a full-stack text-to-image generator using Stable Diffusion, streaming results to a React frontend via
+FastAPI WebSocket.
+• Achieved average generation time of 10–12s on consumer hardware with real-time progress updates to the UI.
+• Applied attention slicing to optimize model execution on low-VRAM GPUs, reducing OOM crashes by 30%.
+Smart Attendance System - React, FastAPI, PostgreSQL, InsightFace, FAISS, MediaPipe (2025)
+• Architected a real-time face recognition attendance system scanning and marking students every 2.5 seconds using
+ArcFace embeddings.
+• Indexed face embeddings with FAISS for sub-second (<50ms) vector search, enabling instant identity lookup
+across all registered students.
+• Deployed liveness detection via MediaPipe to block photo spoofing, and enforced duplicate-prevention logic
+ensuring one entry per student per day
 
 
 Education
