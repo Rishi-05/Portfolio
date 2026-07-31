@@ -3,6 +3,7 @@ Name:- Rishi Chilveri
 Relevant Links: 
 Github = https://github.com/Rishi-05, 
 LinkedIn = https://www.linkedin.com/in/rishi-chilveri-91a01327b/. 
+Portfolio = https://rishi-chilveri.vercel.app/
 Certification Links: [link : https://drive.google.com/drive/folders/1PWptqi3QHufGjQ8yNvdrqBMqgBYvUHJM?usp=sharing] 
 email = rishichilveri14@gmail.com 
 location = Mumbai, India
@@ -12,6 +13,7 @@ Achievements
 Academic Success
 Achieved a CGPA of 10.00 and 9.76 during the 2nd year
 Achieved a CGPA of 9.22 the 3rd year
+Achieved a CGPA of 9.56 the 4rd year
 Passed the Python 3.4.3 Test conducted by IIT Bombay’s Spoken Tutorial Project with a score of 70% and
 earned 4 credits.
 Completed Python for Data Science 4-week NPTEL course (Jul–Aug 2023) with a consolidated score of 72/100.
@@ -22,7 +24,7 @@ Frontend
 HTML, CSS, React.js,
 API integration, Tailwind CSS
 Programming Languages
-C, C++, Python, R, Javascript
+C, C++, Python, Javascript
 Backend
 Node.js, Django, Flask, MongoDB, mySQL
 SQL, Firebase, Appwrite
@@ -49,6 +51,15 @@ of internal tools.
 • Strengthened debugging and version control while adhering to NDA compliance.
 
 Projects
+Self-Healing RAG - LangGraph, ChromaDB, Groq, BM25, Cross-Encoder, Streamlit (2026)
+• Engineered a self-healing Retrieval-Augmented Generation pipeline using LangGraph, deploying a critic agent that
+validates answer groundedness and triggers automatic query reformulation, achieving a 0% hallucination rate on a
+self-built 30-question evaluation set.
+• Implemented hybrid retrieval combining BM25 keyword search and vector similarity via Reciprocal Rank Fusion,
+followed by cross-encoder reranking, improving answer accuracy from 92% (baseline RAG) to 96%.
+• Built an automated evaluation harness benchmarking retrieval accuracy, hallucination rate, and latency across two
+RAG architectures, and deployed the system with multi-model fallback for uninterrupted inference under
+per-model rate limits.
 Text2Tone - Flask, JWT Authentication, PostgreSQL, Text-to-Speech API 
 • Developed an intuitive text-to-audio conversion platform using Flask, enabling users to convert written content
 into natural-sounding speech with support for multiple languages.
