@@ -4,23 +4,23 @@ import Title from '../Title'
 
 const ProjectsSection = () => {
     const projects = {
-        WildVision: {
-            title: 'WildVision',
-            description: 'Animal classification system using MobileNetV2 and OpenCV, achieving over 90% accuracy on realworld wildlife and domestic animal images. Utilized OpenCV for image preprocessing, contour detection, and frame extraction, improving classification reliability by 35%.',
-            image: '/WildVision.png',
-            github: 'https://github.com/Rishi-05/Animal-Image-Classification'
+        SelfHealingRAG: {
+            title: 'Self-Healing RAG',
+            description: 'A self-healing Retrieval-Augmented Generation pipeline built with LangGraph, featuring a critic agent that validates answer groundedness and triggers automatic query reformulation, achieving a 0% hallucination rate on a self-built 30-question evaluation set. Combines BM25 keyword search and vector similarity via hybrid retrieval with cross-encoder reranking, improving answer accuracy from 92% to 96% over baseline RAG.',
+            image: '/firstlook.png',
+            github: 'https://github.com/Rishi-05/self-healing-RAG/blob/main/output/firstlook.png'
         },
-        Text2Tone: {
-            title: 'Text2Tone',
-            description: 'Its an intuitive text-to-audio conversion platform using Flask, enabling users to convert written content into natural-sounding speech with support for multiple languages. Integrated Text-to-Speech APIs and optimized the backend pipeline, reducing audio generation time by 45%',
-            image:'/Text2Tone.png',
-            github: ''
+        PixelStudio: {
+            title: 'Pixel Studio',
+            description: 'A full-stack text-to-image generator built with Stable Diffusion, streaming results to a React frontend via FastAPI WebSocket. Achieved 10-12s average generation time on consumer hardware with real-time progress updates, and applied attention slicing to optimize execution on low-VRAM GPUs, reducing OOM crashes by 30%.',
+            image: '/gallery.png',
+            github: 'https://github.com/Rishi-05/pixelstudio/blob/main/assests/gallery.png'
         },
-        CropSense: {
-            title: 'Crop-Recommendation-system',
-            description: 'A data-driven web application that helps farmers maximize their yield by recommending the most suitable crop based on real-time soil and weather conditions. This project leverages a machine learning model to provide accurate, actionable insights through a simple, user-friendly interface.',
-            image: '/Crop-Recommendation-system.png',
-            github: 'https://github.com/Rishi-05/Crop-Recommendation-system'
+        SmartAttendance: {
+            title: 'Smart Attendance System',
+            description: 'A real-time face recognition attendance system that scans and marks students every 2.5 seconds using ArcFace embeddings. Indexed face embeddings with FAISS for sub-second (<50ms) vector search across all registered students, deployed liveness detection via MediaPipe to block photo spoofing, and enforced duplicate-prevention logic ensuring one entry per student per day.',
+            image: '/dashboard_chart.png',
+            github: 'https://github.com/Rishi-05/smart-attendance/blob/main/screenshots/dashboard_chart.png'
         }
     }
 
