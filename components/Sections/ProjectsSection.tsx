@@ -28,9 +28,9 @@ const ProjectsSection = () => {
         <div className='flex-col items-center scroll-mb-20 min-h-screen' id="projects">
             <Title word1="Featured" word2="PROJECTS" className='' />
             <section className="flex justify-center space-x-3 mb-10 max-md:flex-col max-md:-ml-2 ">
-                <Card {...projects.self-healing-RAG} />
+                <Card {...projects.self - healing - RAG} />
                 <Card {...projects.pixelstudio} />
-                <Card {...projects.smart-attendance} />
+                <Card {...projects.smart - attendance} />
             </section>
         </div>
     )
