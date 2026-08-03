@@ -13,7 +13,7 @@ const ProjectsSection = () => {
         "pixelstudio": {
             title: 'Pixel Studio',
             description: 'A full-stack text-to-image generator built with Stable Diffusion...',
-            image: '/gallery.png',
+            image: '/pixelstudio.png',
             github: 'https://github.com/Rishi-05/pixelstudio'
         },
         "smart-attendance": {
