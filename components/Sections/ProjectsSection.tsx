@@ -19,7 +19,7 @@ const ProjectsSection = () => {
         "smart-attendance": {
             title: 'Smart Attendance System',
             description: 'A real-time face recognition attendance system...',
-            image: '/dashboard_chart.png',
+            image: '/smart_attandence.png',
             github: 'https://github.com/Rishi-05/smart-attendance'
         }
     }
