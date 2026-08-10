@@ -39,9 +39,6 @@ export default function Home() {
 
       <div className='w-full'>
 
-        <div className="max-md:hidden">
-          <HeaderSection />
-        </div>
         <HeroSection />
         <ProjectsSection />
 
