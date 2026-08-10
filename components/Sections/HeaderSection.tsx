@@ -1,12 +1,33 @@
+"use client";
 import React from 'react'
-import Headerbox from '../Headerbox'
+import { HeroName } from '../HeroName'
+import HeroPic from '../HeroPic'
+import FinisherBackground from '../FinisherBackground'
+import ResumeBTN from '../ResumeBTN';
 
-const HeaderSection = () => {
-    return (
-        <div className="h-full w-full  relative flex flex-col antialiased max-md:flex-col" id="header">
-            <Headerbox />
+const HeroSection = () => {
+  return (
+    <div className="h-screen w-screen max-md:flex-col max-md:-ml-3" id="hero">
+      <div className="flex-grow flex relative items-center mb-8 h-screen">
+        <div className="flex flex-col w-full max-w-screen-lg">
+
+          <div className="flex-1 flex justify-start
+                              lg:-mt-20
+                              sm:-mt-20">
+            <HeroName />
+          </div>
+
+          <ResumeBTN />
+          
+          <div className="flex-1 flex justify-center max-md:justify-center max-md:-ml-3">
+            <HeroPic />
+          </div>
+
         </div>
-    )
+      </div>
+    </div>
+
+  )
 }
 
-export default HeaderSection
+export default HeroSection
