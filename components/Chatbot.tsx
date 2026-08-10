@@ -8,6 +8,10 @@ import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { LogOut, MessageCircle, SendHorizontal, X } from 'lucide-react'
 
+// Points to your separately-deployed Flask backend.
+// Set NEXT_PUBLIC_CHAT_API_URL in Vercel env vars, e.g. https://rishi-chat-api.vercel.app
+const CHAT_API_BASE = process.env.NEXT_PUBLIC_CHAT_API_URL || 'http://localhost:5328'
+
 type ChatMessage = {
   userMessage: string
   botResponse: string
@@ -49,7 +53,7 @@ export default function EnhancedChatbot() {
   const getAudioForText = async (text: string): Promise<string | undefined> => {
     try {
       const response = await axios.post(
-        'https://rishi-chilveri.vercel.app/api/text-to-speech',
+        `${CHAT_API_BASE}/api/text-to-speech`,
         { text },
         { responseType: 'blob' }
       )
@@ -66,7 +70,7 @@ export default function EnhancedChatbot() {
     
     try {
       setIsLoading(true)
-      const response = await axios.post('https://rishi-chilveri.vercel.app/api/chat', {
+      const response = await axios.post(`${CHAT_API_BASE}/api/chat`, {
         userMessage: userQuery,
         resumeContent,
         chatHistory: chatHistory,
@@ -92,35 +96,22 @@ export default function EnhancedChatbot() {
     }
   }
 
-  const startSession = async () => {
-    try {
-      setIsLoading(true)
-      const response = await axios.post('https://rishi-chilveri.vercel.app/api/start_session', {
-        resumeContent
-      })
-      setChatOpen(true)
-      setChatHistory([{ userMessage: '', botResponse: "Hey! Ask me questions about Rishi" }])
-      console.log('Session started:', response.data)
-    } catch (error) {
-      console.error('Error starting session:', error)
-    } finally {
-      setIsLoading(false)
-    }
+  // Session state lives entirely on the client — resumeContent and chatHistory
+  // are already tracked in React state and sent with every /api/chat call,
+  // so there's no need to round-trip to the backend just to open/close the panel.
+  const startSession = () => {
+    setChatOpen(true)
+    setChatHistory([{ userMessage: '', botResponse: "Hey! Ask me questions about Rishi" }])
   }
 
-  const endSession = async () => {
-    try {
-      await axios.post('https://rishi-chilveri.vercel.app/api/end_session')
-      chatHistory.forEach(chat => {
-        if (chat.audioUrl) {
-          URL.revokeObjectURL(chat.audioUrl)
-        }
-      })
-      setChatOpen(false)
-      setChatHistory([])
-    } catch (error) {
-      console.error('Error ending session:', error)
-    }
+  const endSession = () => {
+    chatHistory.forEach(chat => {
+      if (chat.audioUrl) {
+        URL.revokeObjectURL(chat.audioUrl)
+      }
+    })
+    setChatOpen(false)
+    setChatHistory([])
   }
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
