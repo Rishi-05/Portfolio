@@ -1,31 +1,46 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { FlipWords } from "./ui/flip-words";
+import { motion } from "framer-motion";
+import { BackgroundGradient } from "./ui/background-gradient";
 
 const HeroPic = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.9, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-      className="flex items-center gap-4 sm:gap-5"
-    >
-      <div className="relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-full overflow-hidden ring-1 ring-[#FF6A2C]/60">
-        <Image
-          src="/profile.png"
-          fill
-          sizes="64px"
-          alt="Rishi Chilveri"
-          className="object-cover"
-        />
-      </div>
-      <FlipWords
-        words={["AI Developer", "Data Science Geek", "RAG Systems"]}
-        className="font-mono text-sm sm:text-base text-[#F3F1EA]/80 !p-0"
-      />
-    </motion.div>
+    <div className="absolute transform flex flex-col mr-[16%] translate-x-[160%] -translate-y-[90%] max-w-full
+        max-md:translate-x-[8%] max-md:-translate-y-[180%]
+       ">
+      
+      {/* IMAGE */} 
+      <BackgroundGradient className="p-2 rounded-full">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 2.5 }}
+          className="relative rounded-full overflow-hidden 
+            h-[350px] w-[350px]
+            max-md:h-[250px] max-md:w-[250px]"
+        >
+          <Image
+            src="/profile.png"
+            width={350}
+            height={350}
+            alt="Just ME"
+            className="rounded-full"
+          />
+        </motion.div>
+      </BackgroundGradient>
+
+      {/* TEXT */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 4 }}
+        className="mt-4 flex justify-center"
+      >
+        <FlipWords words={["ML Engineer", "AI Developer", "Data Science Geek"]} className="text-3xl max-md:text-2xl max-md:tracking-tight" />
+      </motion.div>
+    </div>
   );
 };
 
