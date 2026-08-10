@@ -1,43 +1,27 @@
 "use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-function YourComponent() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000); 
-
-    return () => clearTimeout(timer);
-  }, []); 
-
+function ResumeButton() {
   const openPdf = () => {
     window.open('/Resume.pdf', '_blank');
   };
 
   return (
-    <div>
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            className='ml-60 -mb-5 mt-5 max-md:ml-[28%]'>
-            <button className="p-[3px] relative" onClick={openPdf}>
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg" />
-              <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
-                Resume
-              </div>
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    <motion.button
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      onClick={openPdf}
+      className="group relative font-mono text-xs sm:text-sm tracking-[0.15em] uppercase
+        px-6 py-3 rounded-full border border-[#F3F1EA]/25 text-[#F3F1EA]
+        hover:border-[#FF6A2C] transition-colors duration-300"
+    >
+      <span className="relative z-10 flex items-center gap-2">
+        Resume
+        <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+      </span>
+    </motion.button>
   );
 }
 
-export default YourComponent;
+export default ResumeButton;
