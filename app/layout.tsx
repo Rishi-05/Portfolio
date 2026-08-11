@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import FinisherBackground from "@/components/FinisherBackground";
 import { Toaster } from "react-hot-toast";
 import EnhancedChatbot from "@/components/Chatbot";
 import { Analytics } from "@vercel/analytics/react";
@@ -29,12 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} ${spaceGrotesk.variable} ${plexMono.variable} h-full`}>
+      <body className={`${inter.className} ${spaceGrotesk.variable} ${plexMono.variable} h-full bg-background text-foreground`}>
         <div className="relative min-h-screen w-full flex flex-col antialiased">
-          {/* Animated Finisher Header */}
-          <FinisherBackground />
-
-          {/* Main Content */}
           <div className="relative z-10 flex-grow">
             {children}
           </div>
@@ -44,7 +39,7 @@ export default function RootLayout({
             position="bottom-left"
             reverseOrder={false}
             toastOptions={{
-              style: { background: '#5A72A0', color: '#FDFFE2' },
+              style: { background: '#1a1a18', color: '#F3F1EA' },
             }}
           />
         </div>
