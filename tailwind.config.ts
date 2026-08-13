@@ -82,24 +82,24 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-  		keyframes: {
-  			aurora: {
-  				from: {
-  					backgroundPosition: '50% 50%, 50% 50%'
-  				},
-  				to: {
-  					backgroundPosition: '350% 50%, 350% 50%'
-  				}
+      keyframes: {
+          aurora: {
+              from: {
+                  backgroundPosition: '50% 50%, 50% 50%'
+              },
+              to: {
+                  backgroundPosition: '350% 50%, 350% 50%'
+              }
+          },
           'marquee-x': {
-            from: { transform: 'translateX(0)' },
-            to: { transform: 'translateX(-50%)' },
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(-50%)' },
           },
-            'float-y': {
-            '0%, 100%': { transform: 'translateY(0)' },
-            '50%': { transform: 'translateY(-14px)' },
+          'float-y': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-14px)' },
           },
-  			}
-  		},
+      },
       animation: {
         marquee: 'marquee-x 28s linear infinite',
         float: 'float-y 6s ease-in-out infinite',
