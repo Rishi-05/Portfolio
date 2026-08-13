@@ -27,7 +27,7 @@ export default function RootLayout({
         <CustomCursor />
         <div className="relative min-h-screen w-full flex flex-col antialiased">
           {/* Animated Finisher Header */}
-          <FinisherBackground />
+          {/* <FinisherBackground /> */}
 
           {/* Main Content */}
           <div className="relative z-10 flex-grow">
