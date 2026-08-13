@@ -5,7 +5,7 @@ import FinisherBackground from "@/components/FinisherBackground";
 import { Toaster } from "react-hot-toast";
 import EnhancedChatbot from "@/components/Chatbot";
 import { Analytics } from "@vercel/analytics/react";
-import CustomCursor from "@/components/CustomCursor.tsx"
+import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
