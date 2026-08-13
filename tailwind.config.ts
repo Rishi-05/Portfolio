@@ -22,7 +22,9 @@ const config: Config = {
   	},
   	extend: {
   		animation: {
-  			aurora: 'aurora 60s linear infinite'
+  			aurora: 'aurora 60s linear infinite',
+        marquee: 'marquee-x 28s linear infinite',
+        float: 'float-y 6s ease-in-out infinite',
   		},
   		colors: {
         mint: 'oklch(0.86 0.19 165)',
@@ -36,13 +38,6 @@ const config: Config = {
   			'purple-400': '#b982e0',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
-  			fontFamily: {
-          display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        },
-        boxShadow: {
-          glow: '0 0 60px -12px color-mix(in oklab, oklch(0.86 0.19 165) 45%, transparent)',
-        },
         card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -82,6 +77,13 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
+      fontFamily: {
+        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"DM Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        glow: '0 0 60px -12px color-mix(in oklab, oklch(0.86 0.19 165) 45%, transparent)',
+      },
       keyframes: {
           aurora: {
               from: {
@@ -99,10 +101,6 @@ const config: Config = {
               '0%, 100%': { transform: 'translateY(0)' },
               '50%': { transform: 'translateY(-14px)' },
           },
-      },
-      animation: {
-        marquee: 'marquee-x 28s linear infinite',
-        float: 'float-y 6s ease-in-out infinite',
       },
   		borderRadius: {
   			lg: 'var(--radius)',
