@@ -23,19 +23,32 @@
 }
 
 :root {
-    --card-bg-light: #f9fafb;
-    --card-bg-dark: #1a1a1a;
-    --card-border-light: rgba(0, 0, 0, 0.1);
-    --card-border-dark: rgba(255, 255, 255, 0.2); 
-    --card-text-light: #1a202c; 
-    --card-text-dark: #f9fafb; 
-    --card-shadow-light: rgba(0, 0, 0, 0.1); 
-    --card-shadow-dark: rgba(46, 229, 157, 0.1); 
-    --btn-bg-light: #1a202c; 
-    --btn-bg-dark: #f9fafb; 
-    --btn-text-light: #f9fafb; 
-    --btn-text-dark: #1a202c;
-  }
+    --background: 231.8 54.4% 5.2%;
+    --foreground: 217.0 36.0% 95.3%;
+    --card: 229.6 39.3% 8.7%;
+    --card-foreground: 217.0 36.0% 95.3%;
+    --popover: 229.6 39.3% 8.7%;
+    --popover-foreground: 217.0 36.0% 95.3%;
+    --primary: 163.1 100.0% 48.4%;
+    --primary-foreground: 154.3 100.0% 3.6%;
+    --secondary: 244.0 32.8% 15.9%;
+    --secondary-foreground: 217.0 36.0% 95.3%;
+    --muted: 233.7 30.5% 12.8%;
+    --muted-foreground: 220.4 16.8% 66.6%;
+    --accent: 268.4 100.0% 69.0%;
+    --accent-foreground: 258.2 85.7% 98.3%;
+    --destructive: 356.6 88.1% 55.7%;
+    --destructive-foreground: 6.1 100.0% 98.0%;
+    --border: 230 25% 20%;
+    --input: 230 25% 22%;
+    --ring: 163.1 100.0% 48.4%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+}
   
   body.dark {
     --card-bg: var(--card-bg-dark);
@@ -65,7 +78,13 @@
     color: #acedff; 
     text-shadow: 0 0 10px rgba(163, 224, 252, 0.713); 
   }
-  
+
+@media (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none;
+  }
+}
   
   
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
