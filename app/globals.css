@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-gradient {
+  background-image: linear-gradient(100deg, oklch(0.86 0.19 165), oklch(0.66 0.24 300) 55%, oklch(0.83 0.17 82));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: color-mix(in oklab, hsl(var(--card)) 70%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid hsl(var(--border));
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, hsl(var(--foreground)) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, hsl(var(--foreground)) 6%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
 
 :root {
     --card-bg-light: #f9fafb;
