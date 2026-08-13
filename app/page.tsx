@@ -2,10 +2,11 @@ import Title from '@/components/Title';
 import SkillCard from '@/components/SkillCard';
 import { Navbar } from '@/components/Navbar';
 import Link from 'next/link';
-import HeroSection from '@/components/Sections/HeroSection';
-import ProjectsSection from '@/components/Sections/ProjectsSection';
+import HeroSection from '@/components/Sections/Hero';
+import ProjectsSection from '@/components/Sections/Projects';
 import HeaderSection from '@/components/Sections/HeaderSection';
-import ContactSection from '@/components/Sections/ContactSection';
+import ContactSection from '@/components/Sections/Skills';
+import ContactSection from '@/components/Sections/Contact';
 import MobileNavbar from '@/components/MobileNav';
 import Chatbot from '@/components/Chatbot';
 
@@ -39,8 +40,8 @@ export default function Home() {
 
       <div className='w-full'>
 
-        <HeroSection />
-        <ProjectsSection />
+        <Hero />
+        <Projects />
 
         {/* Skills Section */}
         <section>
@@ -84,9 +85,10 @@ export default function Home() {
           </div>
         </section>
 
-        <ContactSection />
+        <Contact />
         <div className='md:hidden'>
           <HeaderSection />
+          <Skills/>
         </div>
       </div>
     </main>
