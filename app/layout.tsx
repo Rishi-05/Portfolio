@@ -5,6 +5,7 @@ import FinisherBackground from "@/components/FinisherBackground";
 import { Toaster } from "react-hot-toast";
 import EnhancedChatbot from "@/components/Chatbot";
 import { Analytics } from "@vercel/analytics/react";
+import CustomCursor from "components/CustomCursor.tsx"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={`${inter.className} h-full`}>
+        <CustomCursor />
         <div className="relative min-h-screen w-full flex flex-col antialiased">
           {/* Animated Finisher Header */}
           <FinisherBackground />
