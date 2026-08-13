@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
 import FinisherBackground from "@/components/FinisherBackground";
 import { Toaster } from "react-hot-toast";
@@ -8,6 +8,8 @@ import { Analytics } from "@vercel/analytics/react";
 import CustomCursor from "components/CustomCursor.tsx"
 
 const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Rishi Portfolio",
@@ -21,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} h-full`}>
+      <body className={`${inter.className} ${spaceGrotesk.variable} ${dmSans.variable} h-full`}>
         <CustomCursor />
         <div className="relative min-h-screen w-full flex flex-col antialiased">
           {/* Animated Finisher Header */}
