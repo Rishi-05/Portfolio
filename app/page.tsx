@@ -2,11 +2,11 @@ import Title from '@/components/Title';
 import SkillCard from '@/components/SkillCard';
 import { Navbar } from '@/components/Navbar';
 import Link from 'next/link';
-import HeroSection from '@/components/Sections/Hero';
-import ProjectsSection from '@/components/Sections/Projects';
+import Hero from '@/components/Sections/Hero';
+import Projects from '@/components/Sections/Projects';
 import HeaderSection from '@/components/Sections/HeaderSection';
-import ContactSection from '@/components/Sections/Skills';
-import ContactSection from '@/components/Sections/Contact';
+import Skills from '@/components/Sections/Skills';
+import Contact from '@/components/Sections/Contact';
 import MobileNavbar from '@/components/MobileNav';
 import Chatbot from '@/components/Chatbot';
 
