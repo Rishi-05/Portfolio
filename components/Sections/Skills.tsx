@@ -32,11 +32,18 @@ export default function Skills() {
                 {g.label}
               </h3>
               <div className="mt-5 flex flex-wrap gap-2.5">
-                {g.items.map((s) => (
+                {g.items.map((s, si) => (
                   <motion.span
                     key={s}
-                    whileHover={{ y: -4, rotate: -2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                    initial={{ y: 0 }}
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{
+                      duration: 2.4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: si * 0.12,
+                    }}
+                    whileHover={{ y: -8, rotate: -2, scale: 1.05 }}
                     className="cursor-default rounded-xl border border-border bg-secondary/50 px-3.5 py-2 font-display text-sm"
                   >
                     {s}
