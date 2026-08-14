@@ -46,7 +46,7 @@ export default function CustomCursor() {
         style={{ x: ringX, y: ringY }}
         animate={{ scale: hot ? 2.1 : 1, opacity: hot ? 1 : 0.6 }}
         transition={{ type: "spring", stiffness: 300, damping: 22 }}
-        className="absolute -ml-5 -mt-5 flex h-10 w-10 items-center justify-center rounded-full border border-mint/70 mix-blend-screen"
+        className="absolute -ml-5 -mt-5 flex h-10 w-10 items-center justify-center rounded-full border-2 border-mint/80 bg-mint/10"
       >
         {label ? (
           <span className="font-display text-[5px] font-bold tracking-widest text-mint uppercase">
