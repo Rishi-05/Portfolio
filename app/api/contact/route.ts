@@ -16,9 +16,9 @@ export async function POST(req: Request) {
 
   try {
     const body = await req.json();
-    const { firstName, lastName, email, message } = body;
+    const { name, email, message } = body;
 
-    if (!firstName || !lastName || !email || !message) {
+    if (!name || !email || !message) {
       return new NextResponse("Missing required fields", { status: 400 });
     }
 
@@ -27,12 +27,12 @@ export async function POST(req: Request) {
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: toEmail,
       replyTo: email,
-      subject: `New portfolio message from ${firstName} ${lastName}`,
-      text: `From: ${firstName} ${lastName} <${email}>\n\n${message}`,
+      subject: `New portfolio message from ${name}`,
+      text: `From: ${name} <${email}>\n\n${message}`,
       html: `
         <div style="font-family: sans-serif; line-height: 1.5;">
           <h2>New message from your portfolio</h2>
-          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+          <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Message:</strong></p>
           <p>${message.replace(/\n/g, "<br/>")}</p>
