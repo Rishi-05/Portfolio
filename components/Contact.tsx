@@ -1,101 +1,89 @@
 "use client"
 import React, { FormEvent, useState } from "react";
+import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 
 const ContactForm = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ firstName, lastName, email, message }),
+        body: JSON.stringify({ name, email, message }),
       });
 
       if (response.ok) {
-        setFirstName("");
-        setLastName("");
+        setName("");
         setEmail("");
         setMessage("");
-        toast.success("Message sent successfully!");
+        toast.success("Sent! I'll get back to you soon.");
       } else {
-        toast.error("Failed to submit.");
+        toast.error("Failed to send. Try again?");
       }
     } catch (error) {
       console.error("Error submitting form", error);
-      toast.error("Failed to submit.");
+      toast.error("Failed to send. Try again?");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <form
+    <motion.form
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       onSubmit={handleSubmit}
-      className="max-w-lg mx-auto p-6 rounded-xl shadow-lg bg-gray-800 border border-blue-500"
+      className="w-full max-w-2xl mx-auto rounded-3xl border border-[#F3F1EA]/10 bg-[#F3F1EA]/[0.02] p-6 sm:p-8"
     >
-      <h3 className="text-center text-xl text-white mb-5">Please enter your details</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="flex flex-col">
-          <input
-            type="text"
-            id="firstName"
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            className="py-3 px-4 bg-gray-900 text-white rounded-md border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-        </div>
-        <div className="flex flex-col">
-          <input
-            type="text"
-            id="lastName"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            className="py-3 px-4 bg-gray-900 text-white rounded-md border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-        </div>
-      </div>
-
-      <div className="mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input
+          type="text"
+          placeholder="Your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          className="py-3.5 px-5 bg-transparent text-[#F3F1EA] placeholder:text-[#F3F1EA]/40 rounded-full border border-[#F3F1EA]/15 focus:outline-none focus:border-[#2EE6A8]/60 transition-colors"
+        />
         <input
           type="email"
-          id="email"
-          placeholder="Email"
+          placeholder="Your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="py-3 px-4 bg-gray-900 text-white rounded-md border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
+          className="py-3.5 px-5 bg-transparent text-[#F3F1EA] placeholder:text-[#F3F1EA]/40 rounded-full border border-[#F3F1EA]/15 focus:outline-none focus:border-[#2EE6A8]/60 transition-colors"
         />
       </div>
 
-      <div className="mt-4">
-        <textarea
-          id="message"
-          placeholder="Message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="py-3 px-4 w-full bg-gray-900 text-white rounded-md border-2 border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          rows={4}
-          required
-        />
-      </div>
+      <textarea
+        placeholder="What's up?"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        required
+        rows={5}
+        className="mt-4 w-full py-4 px-5 bg-transparent text-[#F3F1EA] placeholder:text-[#F3F1EA]/40 rounded-3xl border border-[#F3F1EA]/15 focus:outline-none focus:border-[#2EE6A8]/60 transition-colors resize-none"
+      />
 
-      <button
+      <motion.button
         type="submit"
-        className="w-full mt-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-        Submit
-      </button>
-    </form>
+        disabled={isSubmitting}
+        whileHover={{ scale: 1.01 }}
+        whileTap={{ scale: 0.99 }}
+        className="mt-4 w-full py-4 rounded-full bg-[#2EE6A8] text-[#0B0C0A] font-semibold tracking-wide disabled:opacity-60 transition-opacity"
+      >
+        {isSubmitting ? "Sending…" : "Send it →"}
+      </motion.button>
+    </motion.form>
   );
 };
 
